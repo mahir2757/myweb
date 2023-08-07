@@ -8,18 +8,7 @@
 <body>
     <form method="POST">
         {% csrf_token %}
-        {% comment %} <label >Roll Number</label><br>
-        <input type="number" name="roll" value="roll"><br>
-        <label >Name</label><br>
-        <input type="text" name="name" value="name"><br>
-        <label >En Number</label><br>
-        <input type="number" name="enno" value="enno"><br>
-        <label >Division</label><br>
-        <input type="text" name="div" value="div"><br>
-        <label >Group Number</label><br>
-        <input type="number" name="gno" value="gno"><br>
-        <label >Project Detail</label><br>
-        <input type="text" name="pdetail" value="pdetail"><br> {% endcomment %}
+        {% comment %} this is html edit page {% endcomment %}
         {{ form.as_p }}
         <input type="submit" value="save changes">
     </form>
