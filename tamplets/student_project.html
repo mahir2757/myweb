@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Project_Detail</title>
+</head>
+<body>
+    <form method="POST" action="/myapp/storedata/">
+        {% csrf_token %}
+        <label >Roll Number</label><br>
+        <input type="number" name="roll"><br>
+        <label >Name</label><br>
+        <input type="text" name="name"><br>
+        <label >En Number</label><br>
+        <input type="number" name="enno"><br>
+        <label >Division</label><br>
+        <input type="text" name="div"><br>
+        <label >Group Number</label><br>
+        <input type="number" name="gno"><br>
+        <label >Project Detail</label><br>
+        <input type="text" name="pdetail"><br>
+        <input type="submit" value="submit">
+    </form>
+</body>
+</html>

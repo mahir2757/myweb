@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .table{
+            color: blue;
+            border: 2px;
+        }
+    </style>
+</head>
+<body>
+    <table class="table">
+        <tr >
+            <th>Roll NO</th>
+            <th>Name</th>
+            <th>En Number</th>
+            <th> Division</th>
+            <th>Group No</th>
+            <th>project Detail</th>
+            <th>Delete</th>
+            <th>Edit</th>
+        </tr>
+        {% for stu in students %}
+        <tr>
+            <td>{{ stu.roll }}</td>
+            <td>{{ stu.name }}</td>
+            <td>{{ stu.enno }}</td>
+            <td>{{ stu.div }}</td>
+            <td>{{ stu.gno }}</td>
+            <td>{{ stu.pdetail }}</td>
+            <td>
+                <a href="/myapp/delete/{{ stu.roll }}">Delete</a>
+                
+            </td>
+            <td>
+                <a href="/myapp/edit/{{ stu.roll }}">Edit</a>
+            </td>
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
