@@ -9,4 +9,5 @@ urlpatterns = [
     path('showdata/',views.showdata),
     path('delete/<roll>', views.deldata),
     path('edit/<roll>',views.editdata),
+    path('editrecord/<roll>',views.editrecord),
 ]

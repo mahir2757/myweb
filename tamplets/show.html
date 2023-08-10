@@ -1,18 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+    {% comment %} <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <style>
-        .table{
-            color: blue;
-            border: 2px;
-        }
-    </style>
+    <title>Document</title> {% endcomment %}
+    {% load static %}
+
+    <link  href="{% static 'bootstrap/bootstrap/css/bootstrap.min.css' %}" rel="stylesheet"/>
 </head>
 <body>
-    <table class="table">
+    <table class="table table-striped table-border table-sm">
         <tr >
             <th>Roll NO</th>
             <th>Name</th>
@@ -41,5 +38,8 @@
         </tr>
         {% endfor %}
     </table>
+    <div class="d-grid gap-2 d-md-flex justify-content-md-center">
+        <a href="/myapp/viewData/"><button class="btn btn-primary me-md-2" type="button">Add Record</button></a>
+    </div>
 </body>
 </html>

@@ -4,13 +4,47 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'bootstrap/bootstrap/css/bootstrap.min.css' %}"/>
 </head>
 <body>
-    <form method="POST">
-        {% csrf_token %}
-        {% comment %} this is html edit page {% endcomment %}
-        {{ form.as_p }}
-        <input type="submit" value="save changes">
+    <form method="POST" action="/myapp/editrecord/{{data.roll}}">
+        <table class="table table-striped table-border table-sm" >
+            {% csrf_token %}
+            <tr>
+                <td>Roll_no  :</td>
+                <td><input type="number" name="roll" value="{{data.roll}}"></td>
+            </tr>    
+            <tr>
+                <td>Name :</td>
+                <td><input type="text" name="name" value="{{data.name}}"></td>
+            </tr>
+            <tr>
+                <td>Enroll_no :</td>
+                <td><input type="number" name="enno" value="{{data.enno}}"></td>
+            </tr>
+            <tr>    
+                <td>Division :</td>
+                <td><input type="text" name="div" value="{{data.div}}"></td>
+            </tr>
+            <tr>    
+                <td>Group_no :</td>
+                <td><input type="number" name="gno" value="{{data.gno}}"></td>
+            </tr>
+            <tr>
+                <td>Project_detail</td>
+                <td><input type="text" name="pdetail" value="{{data.pdetail}}"></td>
+            </tr>
+            <tr>
+                <td>
+                    
+                
+                    <td><div class="d-grid gap-2 d-md-flex justify-content-md-start">
+                            <button class="btn btn-primary me-md-1" type="submit">save changes</button>
+                        </div>
+                    </td>
+                </td>
+            </tr>
     </form>
 </body>
 </html>
